@@ -6,4 +6,11 @@
 //  Copyright © 2019 Trevor Wood. All rights reserved.
 //
 
-import Foundation
+// Store your keys here
+// Get them from a teammate
+struct Keys {
+    struct API {
+        static var development = ""
+        static var production = ""
+    }
+}

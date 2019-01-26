@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        Config.environment = .development
+        if Bundle.main.bundleIdentifier == BundleId.production.rawValue {
+            Config.environment = .production
+        }
+        
+        
+        // Set MainViewController as rootcontroller
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let MainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        window?.rootViewController = MainViewController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

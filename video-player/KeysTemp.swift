@@ -6,4 +6,11 @@
 //  Copyright © 2019 Trevor Wood. All rights reserved.
 //
 
-import Foundation
+// Example for keys
+// DO NOT upload valid Keys into git repo!!
+struct KeysTemp {
+    struct API {
+        static var development = ""
+        static var production = ""
+    }
+}

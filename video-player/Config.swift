@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+enum EnvironmentType {
+    case development,production
+}
+
+enum BundleId: String {
+    case development = "com.original.video-player-dev"
+    case production = "com.original.video-player"
+}
+
+struct Config {
+    
+    static var apiUrl:String = ""
+    static var apiKey:String = ""
+    
+    static var environment:EnvironmentType? {
+        didSet {
+            if environment == .production {
+                apiUrl = "https://trevorwood222.github.io"
+                apiKey = Keys.API.production
+            }else{
+                apiUrl = "https://trevorwood222.github.io"
+                apiKey = Keys.API.development
+            }
+        }
+    }
+    
+
+}
