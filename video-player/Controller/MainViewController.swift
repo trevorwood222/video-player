@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainController.swift
 //  video-player
 //
 //  Created by Trevor Wood on 2019/01/26.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
