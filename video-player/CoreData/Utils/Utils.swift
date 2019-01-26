@@ -19,4 +19,21 @@ struct Utils{
         return code >= 0 && code <= 999
     }
     
+    static func milliSecondsToMinutesAndSeconds(milliseconds:Int) -> (Int,Int){
+        let duration = milliseconds/1000
+        let minutes:Int = Int(floor(Double(duration/60)))
+        let seconds = duration%60
+        return (minutes,seconds)
+    }
+    
+    static func displayMilisecondsAsTime(milliseconds:Int) -> String {
+        let (minutes,seconds) = milliSecondsToMinutesAndSeconds(milliseconds: milliseconds)
+
+        var checkSeconds = "\(seconds)"
+        if seconds <= 9 {
+            checkSeconds = "0\(seconds)"
+        }
+
+        return "\(minutes):\(checkSeconds)"
+    }
 }

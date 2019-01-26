@@ -23,7 +23,6 @@ extension Services {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.cachePolicy = .reloadIgnoringLocalCacheData
         
-        
         fetchPlaylistsDataTask?.cancel()
         fetchPlaylistsDataTask = URLSession.shared.dataTask(with: request) {(data:Data?, response:URLResponse?, error:Error?) in
             
@@ -43,7 +42,7 @@ extension Services {
                 return
             }
             
-            Services.fetchPlaylistCompletion(results: results.result)
+            Services.updateVideos(results: results.result)
             
             completion(
                 response.status,
@@ -55,9 +54,6 @@ extension Services {
         }
         fetchPlaylistsDataTask?.resume()
         
-        
-        
-    
     }
 }
 

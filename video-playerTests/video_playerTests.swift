@@ -31,7 +31,7 @@ class video_playerTests: XCTestCase {
                     print("code: \(code)")
                     print("error: \(error)")
                     print("message: \(message)")
-                    print(result)
+                    print(result as Any)
                     
                     XCTAssert(Utils.isValidCode(code: code))
                     XCTAssert(Utils.isValidStatus(status: status))

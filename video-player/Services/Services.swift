@@ -7,8 +7,22 @@
 //
 
 import Foundation
+import UIKit
+
 struct Services {
     static var videos:[Video] = []
+    
+    static func updateViews(){
+        DispatchQueue.main.async {
+            guard let mainVC:MainViewController = UIApplication.shared.keyWindow?.rootViewController as? MainViewController else{
+                return
+            }
+            
+            if let collectionView = mainVC.collectionView {
+                collectionView.reloadData()
+            }
+        }
+    }
 }
 
 struct StandardServiceResponse: Codable {

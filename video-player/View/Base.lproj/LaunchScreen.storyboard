@@ -21,11 +21,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zYW-uf-esW">
                                 <rect key="frame" x="88" y="312" width="199" height="43.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
-                                <color key="textColor" red="0.21021985529989159" green="0.77046921042730543" blue="0.88681129377505497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.10980392156862745" green="0.2627450980392157" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zYW-uf-esW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="FeY-qX-OYA"/>
                             <constraint firstItem="zYW-uf-esW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="h0h-eP-QXz"/>

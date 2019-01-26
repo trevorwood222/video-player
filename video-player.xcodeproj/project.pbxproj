@@ -18,6 +18,12 @@
 		F2397B2F21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B2D21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift */; };
 		F2397B3221FC245F00BA3C82 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3121FC245F00BA3C82 /* Utils.swift */; };
 		F2397B3321FC245F00BA3C82 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3121FC245F00BA3C82 /* Utils.swift */; };
+		F2397B3521FC2A8200BA3C82 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3421FC2A8200BA3C82 /* VideoCollectionViewCell.swift */; };
+		F2397B3621FC2E2600BA3C82 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3421FC2A8200BA3C82 /* VideoCollectionViewCell.swift */; };
+		F2397B3821FC31EB00BA3C82 /* updateVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3721FC31EB00BA3C82 /* updateVideos.swift */; };
+		F2397B3921FC31ED00BA3C82 /* updateVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3721FC31EB00BA3C82 /* updateVideos.swift */; };
+		F2397B3B21FC546C00BA3C82 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3A21FC546C00BA3C82 /* View.swift */; };
+		F2397B3C21FC546C00BA3C82 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3A21FC546C00BA3C82 /* View.swift */; };
 		F29C166421FC05F6002D9ED7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A977B421FC00BE00CEEA60 /* MainViewController.swift */; };
 		F29C166521FC05F6002D9ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A977B221FC00BE00CEEA60 /* AppDelegate.swift */; };
 		F29C166621FC05F6002D9ED7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A977DB21FC04C700CEEA60 /* Config.swift */; };
@@ -65,6 +71,9 @@
 		F2397B2A21FC1B3200BA3C82 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		F2397B2D21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchPlaylistCompletion.swift; sourceTree = "<group>"; };
 		F2397B3121FC245F00BA3C82 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F2397B3421FC2A8200BA3C82 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F2397B3721FC31EB00BA3C82 /* updateVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateVideos.swift; sourceTree = "<group>"; };
+		F2397B3A21FC546C00BA3C82 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		F29C167121FC05F6002D9ED7 /* video-player-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-player-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29C167221FC05F6002D9ED7 /* video-player copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "video-player copy-Info.plist"; path = "/Users/trevorwood/Desktop/gitrepo/video-player/video-player copy-Info.plist"; sourceTree = "<absolute>"; };
 		F29C167621FC0ED3002D9ED7 /* fetchPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchPlaylist.swift; sourceTree = "<group>"; };
@@ -148,6 +157,7 @@
 		F29C167321FC0C92002D9ED7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F2397B3421FC2A8200BA3C82 /* VideoCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -230,6 +240,7 @@
 		F2A977D521FC036800CEEA60 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F2397B3A21FC546C00BA3C82 /* View.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -248,6 +259,7 @@
 				F29C167921FC0F45002D9ED7 /* Services.swift */,
 				F29C167621FC0ED3002D9ED7 /* fetchPlaylist.swift */,
 				F2397B2D21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift */,
+				F2397B3721FC31EB00BA3C82 /* updateVideos.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -418,12 +430,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-video-player/Pods-video-player-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,11 +518,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2397B3C21FC546C00BA3C82 /* View.swift in Sources */,
+				F2397B3621FC2E2600BA3C82 /* VideoCollectionViewCell.swift in Sources */,
 				F29C167B21FC0F45002D9ED7 /* Services.swift in Sources */,
 				F29C166421FC05F6002D9ED7 /* MainViewController.swift in Sources */,
 				F29C166521FC05F6002D9ED7 /* AppDelegate.swift in Sources */,
 				F29C168121FC10CA002D9ED7 /* KeysTemp.swift in Sources */,
 				F2397B2821FC1A8F00BA3C82 /* Keys.swift in Sources */,
+				F2397B3921FC31ED00BA3C82 /* updateVideos.swift in Sources */,
 				F2397B3321FC245F00BA3C82 /* Utils.swift in Sources */,
 				F2397B2C21FC1B3200BA3C82 /* Video.swift in Sources */,
 				F2397B2F21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift in Sources */,
@@ -521,11 +538,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2397B3B21FC546C00BA3C82 /* View.swift in Sources */,
+				F2397B3521FC2A8200BA3C82 /* VideoCollectionViewCell.swift in Sources */,
 				F29C167A21FC0F45002D9ED7 /* Services.swift in Sources */,
 				F2A977B521FC00BE00CEEA60 /* MainViewController.swift in Sources */,
 				F2A977B321FC00BE00CEEA60 /* AppDelegate.swift in Sources */,
 				F29C168021FC10CA002D9ED7 /* KeysTemp.swift in Sources */,
 				F2397B2921FC1A8F00BA3C82 /* Keys.swift in Sources */,
+				F2397B3821FC31EB00BA3C82 /* updateVideos.swift in Sources */,
 				F2397B3221FC245F00BA3C82 /* Utils.swift in Sources */,
 				F2397B2B21FC1B3200BA3C82 /* Video.swift in Sources */,
 				F2397B2E21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift in Sources */,

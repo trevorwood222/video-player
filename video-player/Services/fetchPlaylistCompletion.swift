@@ -10,32 +10,12 @@ import Foundation
 import UIKit
 
 extension Services {
-    static func fetchPlaylistCompletion(results:[FetchPlaylistsResult]){
-        for item in results {
-            Services.videos.append(Video(
-                title: item.title,
-                presenterName: item.presenter_name,
-                description: item.description,
-                thumbnailUrl: item.thumbnail_url,
-                videoUrl: item.video_url,
-                videoDuration: item.video_duration)
-            )
-        }
-        self.videoViewUpdate()
-    }
     
-    static func videoViewUpdate(){
-        DispatchQueue.main.async {
-            guard let mainVC:MainViewController = UIApplication.shared.keyWindow?.rootViewController as? MainViewController else{
-                return
-            }
-
-            if let collectionView = mainVC.collectionView {
-                collectionView.reloadData()
-            }
-
+    static func fetchPlaylistCompletion(status:Int,code:Int,message:String,error:String,result:[FetchPlaylistsResult]?){
+        
+        if Utils.isValidCode(code: code) && Utils.isValidStatus(status: status){
+            self.updateViews()
         }
     }
-    
 }
 

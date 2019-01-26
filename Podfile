@@ -6,7 +6,7 @@ target 'video-player' do
   use_frameworks!
 
   # Pods for video-player
-#  pod 'Kingfisher', '4.0'
+  pod 'Kingfisher', '5.1.0'
   pod 'ReachabilitySwift', '4.3.0'
 
   target 'video-player-dev' do
