@@ -13,7 +13,10 @@ import AVKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let cellHeight:CGFloat = 185
+//    let cellHeight:CGFloat = 185
+    let cellRightTextWidth:CGFloat = 145
+    let cellBottomEstimatedTextHeight:CGFloat = 70
+    let imageRatio:CGFloat = 640/360
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,10 @@ class MainViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        collectionView.reloadData()
+    }
 
 }
 
@@ -75,6 +81,8 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
             UIDevice.current.orientation == .landscapeRight{
             cellWidth = self.collectionView.bounds.width / 2
         }
+        
+        let cellHeight = ((cellWidth - cellRightTextWidth)/imageRatio) + cellBottomEstimatedTextHeight
         
         return CGSize(width: cellWidth, height: cellHeight)
     }
