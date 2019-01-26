@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let cellHeight:CGFloat = 200
+    let cellHeight:CGFloat = 185
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +29,7 @@ extension MainViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
-        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionsHeaderCollectionReuseableViewReuseID", for: indexPath) as? CollectionsHeaderCollectionReuseableView{
-
-
-            sectionHeader.isHidden = .fabrics.count == 0
-            sectionHeader.headerLabel.text = "shirts.header".localized
-            sectionHeader.headerLabel.standardFont()
+        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "VideoCollectionReuseableViewReuseID", for: indexPath) as? VideoCollectionReuseableView{
 
             return sectionHeader
         }
@@ -40,20 +37,11 @@ extension MainViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if Services.videos.count == 0 {
-//            return 1
-//        }
+
         return Services.videos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-//        if Services.videos.count == 0 {
-//            let reuseIdentifier = "LabelCollectionViewCellReuseID"
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! LabelCollectionViewCell
-//            cell.setUp()
-//            return cell
-//        }
         
         
         let reuseIdentifier = "VideoCollectionViewCellReuseID"
@@ -68,6 +56,14 @@ extension MainViewController: UICollectionViewDataSource{
 extension MainViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+        let videoURL = URL(string: Services.videos[indexPath.row].videoUrl)
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+        
     }
 }
 

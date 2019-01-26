@@ -10,6 +10,8 @@
 		07CF62CB55AE743E7AF48D2B /* Pods_video_playerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66DA077571630C203C8CAC9 /* Pods_video_playerTests.framework */; };
 		508F582BB2CC27DB185CFEF0 /* Pods_video_player_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72D524B607280D83F8C8306 /* Pods_video_player_dev.framework */; };
 		E73D77D97202E9ED38FD0531 /* Pods_video_player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3B11207F17CD112B9301AA /* Pods_video_player.framework */; };
+		F22BD61121FC64050053AE56 /* VideoCollectionReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22BD61021FC64050053AE56 /* VideoCollectionReuseableView.swift */; };
+		F22BD61221FC64080053AE56 /* VideoCollectionReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22BD61021FC64050053AE56 /* VideoCollectionReuseableView.swift */; };
 		F2397B2821FC1A8F00BA3C82 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B2721FC1A8F00BA3C82 /* Keys.swift */; };
 		F2397B2921FC1A8F00BA3C82 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B2721FC1A8F00BA3C82 /* Keys.swift */; };
 		F2397B2B21FC1B3200BA3C82 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B2A21FC1B3200BA3C82 /* Video.swift */; };
@@ -67,6 +69,7 @@
 		E4598F6BE775BE6BE7618374 /* Pods-video-playerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-video-playerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-video-playerTests/Pods-video-playerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E92349B7DBA2E1C8128E3219 /* Pods-video-player-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-video-player-dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-video-player-dev/Pods-video-player-dev.debug.xcconfig"; sourceTree = "<group>"; };
 		EE3B11207F17CD112B9301AA /* Pods_video_player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_video_player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22BD61021FC64050053AE56 /* VideoCollectionReuseableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionReuseableView.swift; sourceTree = "<group>"; };
 		F2397B2721FC1A8F00BA3C82 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Keys.swift; path = "/Users/trevorwood/Desktop/gitrepo/video-player/video-player/Keys.swift"; sourceTree = "<absolute>"; };
 		F2397B2A21FC1B3200BA3C82 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		F2397B2D21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchPlaylistCompletion.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				F2397B3421FC2A8200BA3C82 /* VideoCollectionViewCell.swift */,
+				F22BD61021FC64050053AE56 /* VideoCollectionReuseableView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -527,6 +531,7 @@
 				F2397B2821FC1A8F00BA3C82 /* Keys.swift in Sources */,
 				F2397B3921FC31ED00BA3C82 /* updateVideos.swift in Sources */,
 				F2397B3321FC245F00BA3C82 /* Utils.swift in Sources */,
+				F22BD61221FC64080053AE56 /* VideoCollectionReuseableView.swift in Sources */,
 				F2397B2C21FC1B3200BA3C82 /* Video.swift in Sources */,
 				F2397B2F21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift in Sources */,
 				F29C167821FC0ED3002D9ED7 /* fetchPlaylist.swift in Sources */,
@@ -547,6 +552,7 @@
 				F2397B2921FC1A8F00BA3C82 /* Keys.swift in Sources */,
 				F2397B3821FC31EB00BA3C82 /* updateVideos.swift in Sources */,
 				F2397B3221FC245F00BA3C82 /* Utils.swift in Sources */,
+				F22BD61121FC64050053AE56 /* VideoCollectionReuseableView.swift in Sources */,
 				F2397B2B21FC1B3200BA3C82 /* Video.swift in Sources */,
 				F2397B2E21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift in Sources */,
 				F29C167721FC0ED3002D9ED7 /* fetchPlaylist.swift in Sources */,
