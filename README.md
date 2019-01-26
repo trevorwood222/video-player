@@ -12,7 +12,7 @@ iOS App
 
 
 ## The video-player app follows standard Xcode MVC folder structure.
-## It is as follows.
+### It is as follows.
 
 - CoreData : Contains DataModel and Entity Classes.
 - Extensions : Contain One class(default apple class extensions+project class extensions.)
