@@ -19,16 +19,35 @@ class video_playerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFetchVideos() {
+        let expect = expectation(description: "testFetchVideos")
+        var responseReceived = false
+        
+        Services.fetchPlaylists(completion:
+                {(status:Int, code:Int, error:String, message:String, result:[FetchPlaylistsResult]?) in
+                    responseReceived = true
+     
+                    print("status: \(status)")
+                    print("code: \(code)")
+                    print("error: \(error)")
+                    print("message: \(message)")
+                    print(result)
+                    
+                    XCTAssert(Utils.isValidCode(code: code))
+                    XCTAssert(Utils.isValidStatus(status: status))
+                
+                    if let result = result{
+                        XCTAssert(result.count >= 1)
+                        XCTAssert(Services.videos.count >= 1)
+                    }else{
+                        XCTAssert(false, "FetchPlaylistsResult is nil")
+                    }
+                    
+                    expect.fulfill()
+                    
+        })
+        
+        waitForExpectations(timeout: 15, handler: nil)
+        XCTAssert(responseReceived)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
