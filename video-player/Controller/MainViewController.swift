@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     let cellBottomEstimatedTextHeight:CGFloat = 70
     let imageRatio:CGFloat = 640/360
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

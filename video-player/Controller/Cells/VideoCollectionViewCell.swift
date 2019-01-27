@@ -22,7 +22,7 @@ class VideoCollectionViewCell: UICollectionViewCell{
         titleLabel.text = video.title
         presenterNameLabel.text = "by \(video.presenterName)"
         descriptionLabel.text = video.description
-        videoDurationLabel.text = Utils.displayMilisecondsAsTime(milliseconds: video.videoDuration)
+        videoDurationLabel.text = Utils.displaySecondsAsTime(secondsType: .milli, seconds: video.videoDuration)
         thumbnailImageView.kf.setImage(with:  URL(string: video.thumbnailUrl))
     }
     

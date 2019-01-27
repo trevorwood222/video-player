@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 import PassKit
 
+enum SecondsType{
+    case regular,milli
+}
+
 struct Utils{
     
     static func isValidStatus(status:Int) -> Bool{
@@ -19,15 +23,18 @@ struct Utils{
         return code >= 0 && code <= 999
     }
     
-    static func milliSecondsToMinutesAndSeconds(milliseconds:Int) -> (Int,Int){
-        let duration = milliseconds/1000
+    static func secondsToMinutesAndSeconds(secondsType:SecondsType, seconds:Int) -> (Int,Int){
+        var duration = seconds
+        if secondsType == .milli {
+            duration = seconds/1000
+        }
         let minutes:Int = Int(floor(Double(duration/60)))
         let seconds = duration%60
         return (minutes,seconds)
     }
     
-    static func displayMilisecondsAsTime(milliseconds:Int) -> String {
-        let (minutes,seconds) = milliSecondsToMinutesAndSeconds(milliseconds: milliseconds)
+    static func displaySecondsAsTime(secondsType:SecondsType, seconds:Int) -> String {
+        let (minutes,seconds) = secondsToMinutesAndSeconds(secondsType:secondsType, seconds: seconds)
 
         var checkSeconds = "\(seconds)"
         if seconds <= 9 {
