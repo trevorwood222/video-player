@@ -8,6 +8,8 @@ target 'video-player' do
   # Pods for video-player
   pod 'Kingfisher', '5.1.0'
   pod 'ReachabilitySwift', '4.3.0'
+  pod 'SimpleImageViewer', '~> 1.1.1'
+  pod 'Player', '~> 0.12.0'
 
   target 'video-player-dev' do
     inherit! :search_paths

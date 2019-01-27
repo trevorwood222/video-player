@@ -6,14 +6,14 @@
 //  Copyright © 2019 Trevor Wood. All rights reserved.
 //
 
-import UIKit
 import AVFoundation
 import AVKit
+import SimpleImageViewer
+import UIKit
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-//    let cellHeight:CGFloat = 185
     let cellRightTextWidth:CGFloat = 145
     let cellBottomEstimatedTextHeight:CGFloat = 70
     let imageRatio:CGFloat = 640/360
@@ -69,26 +69,32 @@ extension MainViewController: UICollectionViewDelegate{
         }
         
         let video = Services.videos[indexPath.row]
+        guard let originImage = cell.thumbnailImageView else{
+            return
+        }
         
-//        let windowFrame = UIApplication.shared.windows.first!.frame
-//        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseIn, animations: {
-//
-//            cell.thumbnailImageView.frame = windowFrame
-//            cell.thumbnailImageView.alpha = 1
-//            cell.thumbnailImageView.layoutSubviews()
-//
-//        }, completion: { _ in
+        let configuration = ImageViewerConfiguration { config in
+            config.imageView = originImage
+        }
+        
+        let imageViewerController = ImageViewerController(configuration: configuration)
+        
+        self.present(imageViewerController, animated: true){
             let videoURL = URL(string: video.videoUrl)
+            let playerViewController = VideoPlayerViewController()
             let player = AVPlayer(url: videoURL!)
-            let playerViewController = AVPlayerViewController()
             playerViewController.player = player
-            self.present(playerViewController, animated: true) {
-                playerViewController.player!.play()
+            imageViewerController.present(playerViewController, animated: false) {
+                
             }
-//        })
+
+        }
         
     }
 }
+
+
+
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -104,3 +110,5 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: cellWidth, height: cellHeight)
     }
 }
+
+

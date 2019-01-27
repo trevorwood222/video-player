@@ -1,20 +1,28 @@
 PODS:
   - Kingfisher (5.1.0)
+  - Player (0.12.1)
   - ReachabilitySwift (4.3.0)
+  - SimpleImageViewer (1.1.1)
 
 DEPENDENCIES:
   - Kingfisher (= 5.1.0)
+  - Player (~> 0.12.0)
   - ReachabilitySwift (= 4.3.0)
+  - SimpleImageViewer (~> 1.1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Kingfisher
+    - Player
     - ReachabilitySwift
+    - SimpleImageViewer
 
 SPEC CHECKSUMS:
   Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
+  Player: ae8070a33c9360f5c93c247c00236b9489f62fca
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  SimpleImageViewer: 34c3a2cde2d9ac022146772cefc27fca14b0c8b1
 
-PODFILE CHECKSUM: 88c562657fffae9818a221371ff4ef12087a936a
+PODFILE CHECKSUM: 9c34fbcf093754827c6c88d63d7d34aa4244978b
 
 COCOAPODS: 1.5.3

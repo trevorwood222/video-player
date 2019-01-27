@@ -26,6 +26,8 @@
 		F2397B3921FC31ED00BA3C82 /* updateVideos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3721FC31EB00BA3C82 /* updateVideos.swift */; };
 		F2397B3B21FC546C00BA3C82 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3A21FC546C00BA3C82 /* View.swift */; };
 		F2397B3C21FC546C00BA3C82 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2397B3A21FC546C00BA3C82 /* View.swift */; };
+		F27E445821FDC8FC00064F32 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27E445721FDC8FC00064F32 /* VideoPlayerViewController.swift */; };
+		F27E445921FDCDC400064F32 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27E445721FDC8FC00064F32 /* VideoPlayerViewController.swift */; };
 		F29C166421FC05F6002D9ED7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A977B421FC00BE00CEEA60 /* MainViewController.swift */; };
 		F29C166521FC05F6002D9ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A977B221FC00BE00CEEA60 /* AppDelegate.swift */; };
 		F29C166621FC05F6002D9ED7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A977DB21FC04C700CEEA60 /* Config.swift */; };
@@ -77,6 +79,7 @@
 		F2397B3421FC2A8200BA3C82 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2397B3721FC31EB00BA3C82 /* updateVideos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateVideos.swift; sourceTree = "<group>"; };
 		F2397B3A21FC546C00BA3C82 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		F27E445721FDC8FC00064F32 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		F29C167121FC05F6002D9ED7 /* video-player-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-player-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F29C167221FC05F6002D9ED7 /* video-player copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "video-player copy-Info.plist"; path = "/Users/trevorwood/Desktop/gitrepo/video-player/video-player copy-Info.plist"; sourceTree = "<absolute>"; };
 		F29C167621FC0ED3002D9ED7 /* fetchPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchPlaylist.swift; sourceTree = "<group>"; };
@@ -283,6 +286,7 @@
 			children = (
 				F29C167321FC0C92002D9ED7 /* Cells */,
 				F2A977B421FC00BE00CEEA60 /* MainViewController.swift */,
+				F27E445721FDC8FC00064F32 /* VideoPlayerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -435,14 +439,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-video-player/Pods-video-player-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleImageViewer/SimpleImageViewer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageViewer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -534,6 +542,7 @@
 				F22BD61221FC64080053AE56 /* VideoCollectionReuseableView.swift in Sources */,
 				F2397B2C21FC1B3200BA3C82 /* Video.swift in Sources */,
 				F2397B2F21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift in Sources */,
+				F27E445921FDCDC400064F32 /* VideoPlayerViewController.swift in Sources */,
 				F29C167821FC0ED3002D9ED7 /* fetchPlaylist.swift in Sources */,
 				F29C166621FC05F6002D9ED7 /* Config.swift in Sources */,
 			);
@@ -555,6 +564,7 @@
 				F22BD61121FC64050053AE56 /* VideoCollectionReuseableView.swift in Sources */,
 				F2397B2B21FC1B3200BA3C82 /* Video.swift in Sources */,
 				F2397B2E21FC1D3600BA3C82 /* fetchPlaylistCompletion.swift in Sources */,
+				F27E445821FDC8FC00064F32 /* VideoPlayerViewController.swift in Sources */,
 				F29C167721FC0ED3002D9ED7 /* fetchPlaylist.swift in Sources */,
 				F2A977DC21FC04C700CEEA60 /* Config.swift in Sources */,
 			);
