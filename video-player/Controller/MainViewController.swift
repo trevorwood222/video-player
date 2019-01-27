@@ -55,6 +55,7 @@ extension MainViewController: UICollectionViewDataSource{
         
         cell.setup(video: Services.videos[indexPath.row])
         
+        
         return cell
     }
 }
@@ -62,13 +63,29 @@ extension MainViewController: UICollectionViewDataSource{
 extension MainViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        let videoURL = URL(string: Services.videos[indexPath.row].videoUrl)
-        let player = AVPlayer(url: videoURL!)
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        self.present(playerViewController, animated: true) {
-            playerViewController.player!.play()
+        
+        guard let cell = collectionView.cellForItem(at: indexPath) as? VideoCollectionViewCell else{
+            return
         }
+        
+        let video = Services.videos[indexPath.row]
+        
+//        let windowFrame = UIApplication.shared.windows.first!.frame
+//        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseIn, animations: {
+//
+//            cell.thumbnailImageView.frame = windowFrame
+//            cell.thumbnailImageView.alpha = 1
+//            cell.thumbnailImageView.layoutSubviews()
+//
+//        }, completion: { _ in
+            let videoURL = URL(string: video.videoUrl)
+            let player = AVPlayer(url: videoURL!)
+            let playerViewController = AVPlayerViewController()
+            playerViewController.player = player
+            self.present(playerViewController, animated: true) {
+                playerViewController.player!.play()
+            }
+//        })
         
     }
 }
