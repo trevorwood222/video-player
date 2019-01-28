@@ -1,6 +1,8 @@
 # video-player
 iOS App
 
+![example gif](https://github.com/trevorwood222/video-player/blob/develop/video-player.gif)
+
 # Setup Instructions
 
 1. Download xcode 10 (App currently runs on Swift 4.2)
